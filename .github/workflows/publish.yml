@@ -6,7 +6,7 @@ on:
       - feature/CI-CD
 
 jobs:
-  deploy-storybook:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
@@ -36,35 +36,16 @@ jobs:
             --recursive \
             --region ap-northeast-2 \
             build s3://design.luckypear.io
-
-  publish-npm:
-    needs: deploy-storybook
-    runs-on: ubuntu-latest
-    steps:
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.OS }}-build-
-            ${{ runner.OS }}-
-
-      - name: Install Dependencies
-        run: yarn
         
-      - name: Build package
-        run: yarn build
+        - name: Build package
+          run: yarn build
 
-      - name: Build package types
-        run: yarn build:types
-      
-      - name: Test dist configuration
-        run: cat dist/index.js
+        - name: Build package types
+          run: yarn build:types
 
-      # - name: Semantic release
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.REPOSITORY_TOKEN }}
-      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      #   run: npx semantic-release
+        - name: Semantic release
+          env:
+            GITHUB_TOKEN: ${{ secrets.REPOSITORY_TOKEN }}
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          run: npx semantic-release
 
