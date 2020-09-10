@@ -8,16 +8,22 @@
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
+    "@storybook/addons": "^6.0.21",
     "@storybook/react": "^6.0.21",
+    "@storybook/theming": "^6.0.21",
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^9.1.2",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-is": "^16.13.1",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.2",
+    "emotion-theming": "^10.0.27"
   },
   "dependencies": {},
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.35"
   }
 }

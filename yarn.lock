@@ -1634,7 +1634,7 @@
     prop-types "^15.7.2"
     regenerator-runtime "^0.13.3"
 
-"@storybook/addons@6.0.21":
+"@storybook/addons@6.0.21", "@storybook/addons@^6.0.21":
   version "6.0.21"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.0.21.tgz#bd5229652102c3aed59b78ef6920ff6b482b4d78"
   integrity sha512-yDttNLc3vXqBxwK795ykgzTC6MpvuXDQuF4LHSlHZQe6wsMu1m3fljnbYdafJWdx6cNZwUblU3KYcR11PqhkPg==
@@ -1953,7 +1953,7 @@
     prettier "~2.0.5"
     regenerator-runtime "^0.13.3"
 
-"@storybook/theming@6.0.21":
+"@storybook/theming@6.0.21", "@storybook/theming@^6.0.21":
   version "6.0.21"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.0.21.tgz#d56051c0b8679c2b701ce08385660ab4146cf15f"
   integrity sha512-n97DfB9kG6WrV1xBGDyeQibTrh8pBBCp3dSL3UTGH+KX3C2+4sm6QHlTgyekbi5FrbFEbnuZOKAS3YbLVONsRQ==
@@ -4542,7 +4542,7 @@ emojis-list@^3.0.0:
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-3.0.0.tgz#5570662046ad29e2e916e71aae260abdff4f6a78"
   integrity sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==
 
-emotion-theming@^10.0.19:
+emotion-theming@^10.0.19, emotion-theming@^10.0.27:
   version "10.0.27"
   resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-10.0.27.tgz#1887baaec15199862c89b1b984b79806f2b9ab10"
   integrity sha512-MlF1yu/gYh8u+sLUqA0YuA9JX0P4Hb69WlKc/9OLo+WCXuX6sy/KoIa+qJimgmr2dWqnypYKYPX37esjDBbhdw==
