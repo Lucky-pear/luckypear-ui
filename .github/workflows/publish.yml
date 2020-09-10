@@ -2,8 +2,7 @@ name: Storybook deploy and publish package
 on:
   push:
     branches:
-      # - master
-      - feature/CI-CD
+      - master
 
 jobs:
   publish:
@@ -36,7 +35,7 @@ jobs:
             --recursive \
             --region ap-northeast-2 \
             build s3://design.luckypear.io
-            
+
       - name: Build package
         run: yarn build
 
