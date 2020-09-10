@@ -15,7 +15,8 @@
     "babel-preset-react-app": "^9.1.2",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-is": "^16.13.1",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.2",
+    "emotion-theming": "^10.0.27"
   },
   "dependencies": {},
   "scripts": {
