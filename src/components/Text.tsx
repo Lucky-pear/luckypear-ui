@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import styled, { FontType, ColorType, SizeType } from "../../styles/theme";
+import styled, { FontType, ColorType, SizeType } from "../styles/theme";
+import { withTheme } from '../hoc/withTheme';
 
 type TextType = 'default' | 'title' | 'subtitle'
 
@@ -17,10 +18,14 @@ export interface TextProps extends React.HTMLAttributes<HTMLDivElement> {
   type?: TextType,
 }
 
-const Container = styled.div<TextProps>`
-  color: ${({ theme, color }) => theme.color[color!]};
+const Container = styled.div<{
+  color: ColorType,
+  size: SizeType,
+  font: FontType
+}>`
+  color: ${({ theme, color }) => theme.color[color]};
   font-family: ${props => props.font};
-  font-size: ${({ theme, size }) => theme.size[size!]};
+  font-size: ${({ theme, size }) => theme.size[size]};
 `;
 const Title = styled(Container)`
   font-family: ${({ theme }) => theme.font.axis};
@@ -50,7 +55,12 @@ const Text: React.FC<TextProps> = ({
   let Base = baseCompoent[type];
 
   return (
-    <Base {...props}>
+    <Base
+      font={font}
+      color={color}
+      size={size}
+      {...props}
+    >
       {children}
     </Base>
   );
