@@ -25,6 +25,7 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.3",
+    "semantic-release": "^17.1.1",
     "typescript": "^4.0.2"
   },
   "dependencies": {},
@@ -32,11 +33,19 @@
     "build": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o build"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.35",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  }
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ]
 }

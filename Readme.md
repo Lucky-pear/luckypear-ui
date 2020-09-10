@@ -10,7 +10,7 @@
     This is lucky pear's design system
     <br />
     <br />
-    <a href=""><del>View Demo</del></a>
+    <a href="http://design.luckypear.io/">View Demo</a>
     ·
     <a href="https://github.com/Lucky-pear/luckypear-ui/issues/new?assignees=&labels=&template=bug_report.md&title=">Report Bug</a>
     ·
@@ -51,27 +51,4 @@ we are installing @emotion/core because it is in peerDependency.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-### Text
-
-```tsx
-  import { Text } from 'luckypear-ui'
-  
-  const App: React.FC = () => {
-    return (
-      <>
-        <Text type="title">
-          We support lazy devlopers.
-        </Text>
-        <Text type="subtitle" color="grey">
-          We write codes to write less codes.
-          Focus on your code, rest will be done by us.
-        </Text>
-      </>
-    );
-  }
-```
-
-> The link below will be updated after storybook build bundle is deployed
-
-Please refer to [Storybook]()
+### Please refer to [Storybook Docs](http://design.luckypear.io/?path=/docs/introduction--page)
