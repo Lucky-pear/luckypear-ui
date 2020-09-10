@@ -1,13 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import styled, { FontType, ColorType, SizeType } from "../styles/theme";
-import { withTheme } from '../hoc/withTheme';
 
 type TextType = 'default' | 'title' | 'subtitle'
 
 export interface TextProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** children to render */
-  children?: React.ReactNode,
   /** font-family foro your text */
   font?: FontType,
   /** color for your text */
@@ -18,47 +15,39 @@ export interface TextProps extends React.HTMLAttributes<HTMLDivElement> {
   type?: TextType,
 }
 
-const Container = styled.div<{
-  color: ColorType,
-  size: SizeType,
-  font: FontType
-}>`
-  color: ${({ theme, color }) => theme.color[color]};
-  font-family: ${props => props.font};
-  font-size: ${({ theme, size }) => theme.size[size]};
-`;
-const Title = styled(Container)`
-  font-family: ${({ theme }) => theme.font.axis};
-  font-size: ${({ theme }) => theme.size.huge};
-`;
-const Subtitle = styled(Container)`
-  font-family: ${({ theme }) => theme.font.quicksand};
-  font-size: ${({ theme }) => theme.size.big};
+const Container = styled.div<TextProps>`
+  color: ${({ theme, color = 'darkGrey' }) => theme.color[color]};
+  font-family: ${({ theme, font = 'roboto' }) => theme.font[font]};
+  font-size: ${({ theme, size = 'small' }) => theme.size[size]};
 `;
 
-type ContainersType = typeof Container | typeof Title | typeof Subtitle;
-const baseCompoent: Record<TextType, ContainersType> = {
+const Title = styled(Container)`
+  font-family: ${({ theme, font = 'axis' }) => theme.font[font]};
+  font-size: ${({ theme, size = 'huge' }) => theme.size[size]};
+`;
+
+const SubTitle = styled(Container)`
+  font-family: ${({ theme, font = 'quicksand' }) => theme.font[font]};
+  font-size: ${({ theme, size = 'big' }) => theme.size[size]};
+`;
+
+type ContainersType = typeof Container | typeof Title | typeof SubTitle
+const baseComponent: Record<TextType, ContainersType> = {
   default: Container,
   title: Title,
-  subtitle: Subtitle,
+  subtitle: SubTitle,
 }
 
 /** `Text` component to display texts. It automatically renders your child property */
 const Text: React.FC<TextProps> = ({
-  children = 'We write codes to write less codes',
+  children,
   type = 'default',
-  font = 'roboto',
-  color = 'darkGrey',
-  size = 'small',
   ...props
 }) => {
-  let Base = baseCompoent[type];
+  const Base = baseComponent[type];
 
   return (
     <Base
-      font={font}
-      color={color}
-      size={size}
       {...props}
     >
       {children}
