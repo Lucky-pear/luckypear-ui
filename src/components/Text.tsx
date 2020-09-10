@@ -49,7 +49,7 @@ const Text: React.FC<TextProps> = ({
   type = 'default',
   font = 'roboto',
   color = 'darkGrey',
-  size = 'medium',
+  size = 'small',
   ...props
 }) => {
   let Base = baseCompoent[type];

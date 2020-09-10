@@ -15,8 +15,9 @@ export const theme = {
     transparent: 'transparent',
   },
   size: {
-    small: '12px',
-    medium: '16px',
+    tiny: '12px',
+    small: '16px',
+    medium: '20px',
     big: '24px',
     large: '32px',
     huge: '48px',
