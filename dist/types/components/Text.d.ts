@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { FontType, ColorType, SizeType } from "../../styles/theme";
+import { FontType, ColorType, SizeType } from "../styles/theme";
 declare type TextType = 'default' | 'title' | 'subtitle';
 export interface TextProps extends React.HTMLAttributes<HTMLDivElement> {
     /** children to render */
