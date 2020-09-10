@@ -1,1 +1,3 @@
-export { default as Text } from './components/Text/Text';
+import Components from './components';
+
+export ...Components;
