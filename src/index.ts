@@ -1,3 +1,1 @@
-import Components from './components';
-
-export ...Components;
+export { Text } from './components';
