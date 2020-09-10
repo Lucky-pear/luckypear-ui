@@ -37,16 +37,41 @@
 
 <!-- GETTING STARTED -->
 ## Getting Started
-> This will be updated after publishing to npm :) plz wait
 
 ### Prerequisites
-> This will be updated after publishing to npm :) plz wait
 * yarn
 ```sh
+  yarn add luckypear-ui @emotion/core
 ```
+* npm
+```sh
+  npm install luckypear-ui @emotion/core
+```
+we are installing @emotion/core because it is in peerDependency.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+
+### Text
+
+```tsx
+  import { Text } from 'luckypear-ui'
+  
+  const App: React.FC = () => {
+    return (
+      <>
+        <Text type="title">
+          We support lazy devlopers.
+        </Text>
+        <Text type="subtitle" color="grey">
+          We write codes to write less codes.
+          Focus on your code, rest will be done by us.
+        </Text>
+      </>
+    );
+  }
+```
+
 > The link below will be updated after storybook build bundle is deployed
 
 Please refer to [Storybook]()
