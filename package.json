@@ -26,7 +26,8 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.3",
     "semantic-release": "^17.1.1",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.2",
+    "@emotion/core": "^10.0.35"
   },
   "dependencies": {},
   "scripts": {
@@ -36,7 +37,6 @@
     "build-storybook": "build-storybook -o build"
   },
   "peerDependencies": {
-    "@emotion/core": "^10.0.35",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
