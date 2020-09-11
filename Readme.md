@@ -41,13 +41,12 @@
 ### Prerequisites
 * yarn
 ```sh
-  yarn add luckypear-ui @emotion/core
+  yarn add luckypear-ui
 ```
 * npm
 ```sh
-  npm install luckypear-ui @emotion/core
+  npm install luckypear-ui
 ```
-we are installing @emotion/core because it is in peerDependency.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
