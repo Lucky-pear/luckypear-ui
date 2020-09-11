@@ -23,7 +23,8 @@ export const theme = {
     huge: '48px',
   },
   shadow: {
-    box: 'rgba(0, 0, 0, 0.08) 0px 1px 12px'
+    box: 'rgba(0, 0, 0, 0.08) 0px 1px 12px',
+    hover: 'rgba(0, 0, 0, 0.1) 0px 0px 20px',
   },
   font: {
     roboto: 'Roboto',
