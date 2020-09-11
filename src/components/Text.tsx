@@ -1,16 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import styled, { FontType, ColorType, SizeType } from "../styles/theme";
+import styled from "../styles/theme";
+import { BaseProps } from './Base';
 
 type TextType = 'default' | 'title' | 'subtitle'
 
-export interface TextProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** font-family foro your text */
-  font?: FontType,
-  /** color for your text */
-  color?: ColorType,
-  /** size for your text */
-  size?: SizeType,
+export interface TextProps extends BaseProps {
   /** type for your text */
   type?: TextType,
 }
