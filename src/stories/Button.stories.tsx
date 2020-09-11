@@ -17,3 +17,13 @@ export const Naked = Template.bind({});
 Naked.args = {
   type: 'naked'
 }
+
+export const Loading = Template.bind({});
+Loading.args = {
+  state: 'loading'
+}
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  state: 'disabled'
+}
